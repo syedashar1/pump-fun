@@ -1,15 +1,27 @@
-# Pump.fun-Smart-Contract
+# Pump fun Smart Contract
 
-The **Pump.fun Smart Contract forking** is an innovative platform  designed to allow users to create tokens, markets, and pools on Raydium. This comprehensive project offers not only same features of pump.fun but also more for managing token authorities, customizing token properties, and handling liquidity pools with advanced functionalities.
+Pump.fun smart contract clone that works just like pump.fun site, like pump.fun, this smart contract creates the pool on contract, and make users to buy and sell from the pool.
 
-### Key Features
-
-- **Token Management**: Create tokens with customizable names, symbols, and images. Revoke token authority as needed.
-- **Market Creation**: Set up markets for trading tokens with ease.
-- **Pool Management**: Add and remove liquidity in Raydium pools. Burn SPL tokens efficiently.
-- **Dashboard**: Display detail information of token listed on pump.fun.
-- **Spam Detection**: Automatically catch and handle spammers making transactions to the OpenBook market.
-- **Discord Integration**: Receive real-time notifications on Discord via webhooks.
+anchor-cli-wasm v0.29.0 is used.
 
 
-### Please fork to use it and follow me on github.
+### **Instruction Explanations**
+
+1. **`initialize`**  
+   Sets up the bonding curve configuration, including parameters like fees and curve constants, ensuring only authorized users can initialize it.
+
+2. **`create_pool`**  
+   Creates a liquidity pool tied to the bonding curve, initializing accounts to manage token liquidity and transactions.
+
+3. **`add_liquidity`**  
+   Allows users to deposit assets into the liquidity pool, increasing the pool's balance and potentially minting pool tokens as a reward.
+
+4. **`remove_liquidity`**  
+   Enables users to withdraw their share of liquidity from the pool, burning their pool tokens and adjusting the pool's balances.
+
+5. **`buy`**  
+   Lets users purchase tokens based on the bonding curve price, transferring payment to the pool and minting tokens to the buyer.
+
+6. **`sell`**  
+   Allows users to sell tokens back to the pool, burning tokens and receiving payment based on the current bonding curve price.
+
